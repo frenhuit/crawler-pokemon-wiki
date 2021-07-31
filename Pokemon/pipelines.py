@@ -95,6 +95,6 @@ class ElasticSearchPipeline(object):
         pokemon.title = item['title']
         pokemon.content = item['content']
         pokemon.links = item['links']
-        pokemon.suggest = gen_suggests([(pokemon.title, 10), (pokemon.content, 5)])
+        pokemon.suggest = gen_suggests([(pokemon.title, 100), (pokemon.content, 1)])
         pokemon.save()
         return item
